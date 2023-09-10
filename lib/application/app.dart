@@ -1,4 +1,5 @@
 import 'package:ecommerce_ostad/presentation/ui/screens/splash_screen.dart';
+import 'package:ecommerce_ostad/presentation/ui/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class CraftBay extends StatelessWidget {
@@ -10,7 +11,10 @@ class CraftBay extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       theme: ThemeData(
-        primaryColor: Color(0xFF07ADAE),
+        //primaryColor: Color(0xFF07ADAE),
+        //make Primary Swatch
+        //primarySwatch: MaterialColor(0xFF07ADAE, ColorPalette().color),
+        primarySwatch: MaterialColor(ColorPalette.primaryColor.value, ColorPalette().color),
         progressIndicatorTheme: ProgressIndicatorThemeData(
           color: Color(0xFF07ADAE),
         )
