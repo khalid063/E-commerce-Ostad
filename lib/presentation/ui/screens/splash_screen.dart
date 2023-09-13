@@ -1,6 +1,8 @@
 import 'package:ecommerce_ostad/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'home_screen.dart';
 
@@ -21,10 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   
   void goToNextScreen() {
     Future.delayed(Duration(seconds: 3)).then((value) => {
-      Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
-              (route) => false),
+      Get.offAll(HomeScreen()),
         });
   }
 
