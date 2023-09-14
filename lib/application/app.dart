@@ -16,9 +16,35 @@ class CraftBay extends StatelessWidget {
         //make Primary Swatch
         //primarySwatch: MaterialColor(0xFF07ADAE, ColorPalette().color),
         primarySwatch: MaterialColor(ColorPalette.primaryColor.value, ColorPalette().color),
-        progressIndicatorTheme: ProgressIndicatorThemeData(
+        /// Elevated Button style
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 12,),
+            textStyle: const TextStyle(
+              fontSize: 16,
+              letterSpacing: 0.5,
+              fontWeight: FontWeight.w600,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          )
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          contentPadding: EdgeInsets.symmetric(horizontal: 16),
+          border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey)
+          ),
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey)
+          ),
+          disabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey)
+          ),
+        ),
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: Color(0xFF07ADAE),
-        )
+        ),
       ),
     );
   }
