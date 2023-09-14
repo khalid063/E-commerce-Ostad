@@ -15,7 +15,7 @@ class CraftBay extends StatelessWidget {
         //primaryColor: Color(0xFF07ADAE),
         //make Primary Swatch
         //primarySwatch: MaterialColor(0xFF07ADAE, ColorPalette().color),
-        primarySwatch: MaterialColor(ColorPalette.primaryColor.value, ColorPalette().color),
+        primarySwatch: MaterialColor(AppColors.primaryColor.value, AppColors().color),
         /// Elevated Button style
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(

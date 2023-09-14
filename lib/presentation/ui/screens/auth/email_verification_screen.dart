@@ -1,5 +1,8 @@
+import 'package:ecommerce_ostad/presentation/ui/screens/auth/otp_verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../utility/image_assets.dart';
 
@@ -44,13 +47,19 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 ),
               ),
               const SizedBox(height: 16,),
-              TextFormField(),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Email'
+                ),
+              ),
               const SizedBox(height: 16,),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Next'),
+                  onPressed: () {
+                    Get.to(const OtpVerificationScreen());
+                  },
+                  child: const Text('Next'),
                 ),
               ),
             ],

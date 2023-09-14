@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ColorPalette {
+class AppColors {
   Map<int, Color> color = {
     50:const Color.fromRGBO(4,131,184, .1),
     100:const Color.fromRGBO(4,131,184, .2),
