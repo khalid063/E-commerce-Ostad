@@ -1,5 +1,7 @@
+import 'package:ecommerce_ostad/presentation/ui/screens/auth/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import '../../utility/color_palette.dart';
 import '../../utility/image_assets.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -12,6 +14,10 @@ class OtpVerificationScreen extends StatefulWidget {
 }
 
 class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +101,9 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.offAll(CompleteProfileScreen());
+                    },
                     child: Text('Next'),
                   ),
                 ),
@@ -132,3 +140,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
     );
   }
 }
+
+
+
