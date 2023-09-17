@@ -30,7 +30,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 ),
               ),
               const SizedBox(height: 20,),
-              Text(
+              const Text(
                 'Welcome Back',
                 style: TextStyle(
                   fontSize: 24,
@@ -39,7 +39,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 ),
               ),
               const SizedBox(height: 8,),
-              Text(
+              const Text(
                 'Please Enter Your Email Address',
                 style: TextStyle(
                   fontSize: 15,
@@ -48,7 +48,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
               ),
               const SizedBox(height: 16,),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Email'
                 ),
               ),

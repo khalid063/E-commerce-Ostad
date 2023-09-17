@@ -31,7 +31,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   ),
                 ),
                 const SizedBox(height: 20,),
-                Text(
+                const Text(
                   'Complete Profile',
                   style: TextStyle(
                     fontSize: 24,
@@ -40,7 +40,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   ),
                 ),
                 const SizedBox(height: 8,),
-                Text(
+                const Text(
                   'Get started with us by share your details',
                   style: TextStyle(
                     fontSize: 15,
@@ -49,32 +49,32 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                 ),
                 const SizedBox(height: 16,),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'First Name'
                   ),
                 ),
                 const SizedBox(height: 8,),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'Last Name'
                   ),
                 ),
                 const SizedBox(height: 8,),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'Mobile'
                   ),
                 ),
                 const SizedBox(height: 8,),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'City'
                   ),
                 ),
                 const SizedBox(height: 8,),
                 TextFormField(
                   maxLines: 6,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'Shipping Address',
                     contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   ),
