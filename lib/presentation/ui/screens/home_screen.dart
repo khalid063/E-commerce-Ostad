@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 16,),
-              const HomeSlider(),    /// Slider use
+              const HomeSlider(),    /// Slider use for home page slider
               SectionHeader(
                 title: 'Categories',
                 onTap: (){},
