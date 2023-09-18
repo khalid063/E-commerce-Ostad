@@ -3,7 +3,10 @@ import 'package:ecommerce_ostad/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../utility/color_palette.dart';
+import '../widgets/category_card.dart';
 import '../widgets/circular_icon_button.dart';
+import '../widgets/home/home_slider.dart';
+import '../widgets/home/section_header.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -67,8 +70,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(height: 16,),
-              HomeSlider(),    /// Slider use
-
+              const HomeSlider(),    /// Slider use
+              SectionHeader(
+                title: 'Categories',
+                onTap: (){},
+              ),
+              const SizedBox(height: 0,),
+              SizedBox(
+                height: 100,
+                child: ListView.builder(
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index){
+                      return const CatagoryCard();
+                }),
+              ),
+              const SizedBox(height: 16,),
+              SectionHeader(
+                title: 'Popular',
+                onTap: (){},
+              ),
             ],
           ),
         ),
@@ -78,92 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 
-class CircularIconButton extends StatelessWidget {
-
-  final IconData icon;
-  final VoidCallback onTap;
-
-  const CircularIconButton({super.key, required this.icon, required this.onTap,});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){},
-      borderRadius: BorderRadius.circular(30),
-      child: CircleAvatar(
-        radius: 16,
-        backgroundColor: Colors.grey.shade200,
-        child: Icon(icon, color: Colors.grey, size: 18,),
-      ),
-    );
-  }
-}
 
 
-class HomeSlider extends StatefulWidget {
-  const HomeSlider({super.key});
 
-  @override
-  State<HomeSlider> createState() => _HomeSliderState();
-}
 
-class _HomeSliderState extends State<HomeSlider> {
 
-  ValueNotifier<int> _selectedSlider = ValueNotifier(0);   /// Slider under movable dot
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        /// Simple slider code
-        CarouselSlider(
-          options: CarouselOptions(
-            height: 180.0,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 3),
-            onPageChanged: (int page, _){
-              _selectedSlider.value = page;
-            },
-          ),
-          items: [1,2,3,4,5].map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                        color: Colors.amber
-                    ),
-                    child: Text('text $i', style: TextStyle(fontSize: 16.0),)
-                );
-              },
-            );
-          }).toList(),
-        ),
-        const SizedBox(height: 16,),
-        /// bottom movable dot code
-        ValueListenableBuilder(valueListenable: _selectedSlider, builder: (context, value , _){
-          List<Widget> list = [];
-          for ( int i = 0; i < 5; i++){
-            list.add(Container(
-              width: 10,
-              height: 10,
-              margin: EdgeInsets.symmetric(horizontal: 4),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.red),
-                  borderRadius: BorderRadius.circular(10),
-                  color: value == i ? AppColors.primaryColor : null
-              ),
-            ));
-          }
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: list,
-          );
-        })
-      ],
-    );
-  }
-}
+
+
 
 
