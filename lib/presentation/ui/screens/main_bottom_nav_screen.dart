@@ -1,7 +1,9 @@
 
 
+import 'package:ecommerce_ostad/presentation/ui/screens/auth/category_list_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/screens/auth/email_verification_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/screens/auth/otp_verification_screen.dart';
+import 'package:ecommerce_ostad/presentation/ui/screens/auth/wish_list_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/screens/home_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/utility/color_palette.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +19,9 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   int _selectedIndex = 0;
   final List<Widget> _screens = [
     const HomeScreen(),
-    const EmailVerificationScreen(),
-    const OtpVerificationScreen(),
+    const CategoryListScreen(),
     const HomeScreen(),
+    const WishListScreen(),
   ];
 
   @override

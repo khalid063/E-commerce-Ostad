@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_ostad/presentation/ui/screens/auth/category_list_screen.dart';
+import 'package:ecommerce_ostad/presentation/ui/screens/product_list_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -95,7 +96,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16,),
               SectionHeader(
                 title: 'Popular',
-                onTap: (){},
+                onTap: (){
+                  Get.to(const ProductListScreen());
+                },
               ),
               SizedBox(
                 height: 170,
@@ -111,7 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16,),
               SectionHeader(
                 title: 'Special',
-                onTap: (){},
+                onTap: (){
+                  Get.to(const ProductListScreen());
+                },
               ),
               SizedBox(
                 height: 170,
@@ -127,7 +132,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16,),
               SectionHeader(
                 title: 'New',
-                onTap: (){},
+                onTap: (){
+                  Get.to(const ProductListScreen());
+                },
               ),
               SizedBox(
                 height: 170,
