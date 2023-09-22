@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerce_ostad/presentation/ui/screens/auth/category_list_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../utility/color_palette.dart';
 import '../widgets/category_card.dart';
 import '../widgets/circular_icon_button.dart';
@@ -74,7 +77,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const HomeSlider(),    /// Slider use for home page slider
               SectionHeader(
                 title: 'Categories',
-                onTap: (){},
+                onTap: (){
+                  Get.to(const CategoryListScreen());
+                },
               ),
               const SizedBox(height: 0,),
               SizedBox(
