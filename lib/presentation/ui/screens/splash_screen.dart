@@ -1,4 +1,5 @@
 import 'package:ecommerce_ostad/presentation/ui/screens/auth/email_verification_screen.dart';
+import 'package:ecommerce_ostad/presentation/ui/screens/main_bottom_nav_screen.dart';
 import 'package:ecommerce_ostad/presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   
   void goToNextScreen() {
     Future.delayed(Duration(seconds: 3)).then((value) => {
-      Get.offAll(HomeScreen()),
+      Get.offAll(MainBottomNavScreen()),
         });
   }
 
